@@ -7,51 +7,150 @@
 
 <!--body 태그에 있는 기본 마진값 없애기-->
 <style>
-  body{
-       margin: 0;
-     }
-  div {
-    border: 1px solid #e9e9e9;
+  body {
+    margin: 0;
   }
-  .width-narrow{
+
+  /*div {*/
+  /*  border: 1px solid #e9e9e9;*/
+  /*}*/
+
+  .width-narrow {
     width: 500px;
   }
 
   div.img-box {
     display: inline-block;
   }
-  .img-box{
-    /*display: inline-block;*/
 
+  .img-box {
+    /*display: inline-block;*/
     width: 200px;
     height: 200px;
-
   }
+
+  .dashed-square {
+    border: 2px dashed #123456;
+    width: 100px;
+    height: 100px;
+  }
+
+  .dashed-square.big-square {
+    width: 150px;
+  }
+
+  .big-square{
+    width: 200px;
+  }
+
+
+  #dashed_square{
+    border: 2px dashed #123456;
+    /*border: 2px dashed #178619;*/
+    /*width: 100px;*/
+    /*height: 100px;*/
+  }
+
+  .dashed-green-square {
+    border: 2px dashed #178619;
+    width: 100px;
+    height: 100px;
+  }
+
+  .grandparent{
+    border: 2px dashed #178619;
+    width: 100px;
+    height: 100px;
+  }
+
+  .grandparent .child.first .blabla{
+    border: 2px dashed #3c7f86;
+    width: 50px;
+    height: 50px;
+  }
+  .grandparent > .parent{
+    border: 2px dashed #3c7f86;
+    width: 50px;
+    height: 50px;
+  }
+
+  .parent{
+    border: 1px dashed #3c7f86;
+    width: 50px;
+    height: 50px;
+  }
+
+
+
 </style>
 
 <body>
-<div class="img-box">1</div>
-<div class="img-box">2</div>
-<div class="img-box">3</div>
+
+
+<!--태그로 직접 선택-->
+<div>
+  얘한테 주고 싶어요
+  그러면 디비전 모두 함께 받아요
+</div>
+
+<!--클래스로 선택-->
+<div class="dashed-square big-square">
+  얘한테 주고 싶어요
+  클래스로 받아요
+</div>
+<div class="dashed-square">
+  얘한테도 주고 싶어요
+  클래스로 받아요
+</div>
+
+<!--아이디로 선택-->
+<div id="dashed_square" class="dashed-green-square">
+  얘한테도 주고 싶어요
+  아이디로 받아요
+</div>
+<!--아이디는 하나만!-->
+<!--<div id="dashed_square" class="dashed-green-square">-->
+<!--  얘한테도 주고 싶어요-->
+<!--  아이디로 받아요-->
+<!--</div>-->
+<!--원론적으로, 아이디는 스타일을 위해서 쓰지 않는다-->
+
+<!--조건으로 선택-->
+<!--필요한 경우가 아니면 / 익숙해지기 전까지 쓰지말자-->
+<div class="grandparent">
+  <div class="parent">
+    <div class="child">
+      im child!
+    </div>
+  </div>
+</div>
+<div class="parent">
+  <div class="child">
+    im child!
+  </div>
+</div>
+
 <span class="img-box">1</span>
 <span class="img-box">1</span>
 <span class="img-box">1</span>
 
 
 <div class="width-narrow">
-<div>
-  때 어머님, 겨울이 아무 버리었습니다. 별 소녀들의 겨울이 이름과 하나 버리었습니다. 별 소학교 이웃 풀이 무성할 이네들은 하나의 사랑과 어머니, 까닭입니다. 북간도에 사람들의 그러나 같이 덮어 있습니다. 노루,
-  나는 자랑처럼 남은 벌레는 위에 무엇인지 내 까닭입니다. 강아지, 별 벌써 까닭이요, 듯합니다. 피어나듯이 토끼, 멀듯이, 버리었습니다. 패, 어머니, 가을 이런 내린 아침이 봅니다. 가을 봄이 하나에 우는
-  있습니다.
+  <div>
+    때 어머님, 겨울이 아무 버리었습니다. 별 소녀들의 겨울이 이름과 하나 버리었습니다. 별 소학교 이웃 풀이 무성할 이네들은 하나의 사랑과 어머니, 까닭입니다. 북간도에 사람들의 그러나 같이 덮어 있습니다.
+    노루,
+    나는 자랑처럼 남은 벌레는 위에 무엇인지 내 까닭입니다. 강아지, 별 벌써 까닭이요, 듯합니다. 피어나듯이 토끼, 멀듯이, 버리었습니다. 패, 어머니, 가을 이런 내린 아침이 봅니다. 가을 봄이 하나에 우는
+    있습니다.
 
-  우는 별빛이 나의 동경과 내 시인의 계십니다. 지나고 것은 차 마디씩 이름을 별 이제 까닭입니다. 이런 써 나는 별 내린 듯합니다. 밤이 하나에 멀듯이, 속의 많은 새워 별 그러나 이국 까닭입니다. 아스라히
-  추억과 시와 파란 아름다운 가을로 때 까닭입니다. 강아지, 아무 이제 이름자를 어머니, 봄이 가난한 봅니다. 이국 풀이 이름자 속의 옥 이름자를 듯합니다. 나는 어머니, 덮어 다 그리고 나의 하나의 하나에
-  까닭입니다. 언덕 사람들의 불러 헤는 나의 이름과, 있습니다. 같이 위에 않은 노루, 까닭입니다. 옥 라이너 말 어머니 계절이 비둘기, 까닭입니다.
+    우는 별빛이 나의 동경과 내 시인의 계십니다. 지나고 것은 차 마디씩 이름을 별 이제 까닭입니다. 이런 써 나는 별 내린 듯합니다. 밤이 하나에 멀듯이, 속의 많은 새워 별 그러나 이국 까닭입니다. 아스라히
+    추억과 시와 파란 아름다운 가을로 때 까닭입니다. 강아지, 아무 이제 이름자를 어머니, 봄이 가난한 봅니다. 이국 풀이 이름자 속의 옥 이름자를 듯합니다. 나는 어머니, 덮어 다 그리고 나의 하나의 하나에
+    까닭입니다. 언덕 사람들의 불러 헤는 나의 이름과, 있습니다. 같이 위에 않은 노루, 까닭입니다. 옥 라이너 말 어머니 계절이 비둘기, 까닭입니다.
 
-  헤일 않은 못 겨울이 시와 가을 계십니다. 불러 프랑시스 릴케 듯합니다. 별에도 별빛이 차 버리었습니다. 위에 사람들의 속의 이름과 남은 어머니, 별 아직 있습니다. 많은 아스라히 이름과, 이름을 보고, 자랑처럼
-  이름자를 봄이 거외다. 하나에 이름을 우는 라이너 시와 버리었습니다. 슬퍼하는 하나 노새, 봅니다. 덮어 아무 마리아 가을 이제 불러 이름과 너무나 별 있습니다. 이름과, 걱정도 많은 다 이 하나의 마리아
-  까닭입니다. 나의 위에 이름을 이웃 이름과 애기 노새, 무성할 봅니다.
-</div>
+    헤일 않은 못 겨울이 시와 가을 계십니다. 불러 프랑시스 릴케 듯합니다. 별에도 별빛이 차 버리었습니다. 위에 사람들의 속의 이름과 남은 어머니, 별 아직 있습니다. 많은 아스라히 이름과, 이름을 보고,
+    자랑처럼
+    이름자를 봄이 거외다. 하나에 이름을 우는 라이너 시와 버리었습니다. 슬퍼하는 하나 노새, 봅니다. 덮어 아무 마리아 가을 이제 불러 이름과 너무나 별 있습니다. 이름과, 걱정도 많은 다 이 하나의 마리아
+    까닭입니다. 나의 위에 이름을 이웃 이름과 애기 노새, 무성할 봅니다.
+  </div>
 </div>
 <!---->
 <div>
