@@ -1,0 +1,64 @@
+/**: 모든 요소를 선택하는 CSS 선택자*/
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  margin: 0;
+  /*전체 색칠*/
+  /*background-color: #000000;*/
+}
+
+.navigation-bar {
+
+  /*!*상, 하, 좌, 우 모두 10px*!*/
+  /*margin: 10px;*/
+
+  /*!*상하는 10px, 좌우는 20px*!*/
+  /*margin: 10px 20px;*/
+
+  /*!*상 10px 좌우 20px 하 30px*!*/
+  /*margin: 10px 20px 30px;*/
+
+  /*!*상 10px 우 20px 하 30px 좌 40px*!*/
+  /*margin: 10px 20px 30px 40px;*/
+
+  /*margin: 20px;*/
+  /*!*한군데만 주려면*!*/
+  /*margin-left: 10px;*/
+
+  /*margin - 레이아웃 사이의 공간을 확보할 때*/
+  /*padding - 레이아웃 안의 컨텐츠를 레이아웃과 여백을 주어 정렬할 때*/
+
+  height: 85px;
+  /*background-color: #123456;*/
+  padding: 10px;
+  border-bottom: 1px solid #123123;
+}
+
+.navigation-logo {
+  width: 200px;
+  /*height: auto;*/
+}
+
+.navigation-button-wrap {
+  display: inline-block;
+  float: right;
+  padding: 20px;
+}
+
+.navigation-button {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  padding: 10px;
+  color: #334657;
+  cursor: pointer;
+}
+
+.navigation-link {
+  font-size: 16px;
+  text-decoration: none;
+  color: #334657;
+}
+
