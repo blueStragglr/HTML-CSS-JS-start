@@ -1,0 +1,42 @@
+.four-div-wrap {
+    margin: 15px 0;
+    font-size: 0;
+}
+
+/* Q. 대체 이 끔찍한 계산식들은 무엇인가요... */
+/* A. 반응형으로 %가 유지되게 하기 위해서 계산한 값들입니다.. ㅠㅠ */
+/*    한 줄에 네 개를 넣기 위해서 100%를 4로 나눴고 이때 마진을 넣기 위해서 -12px을 부여합니다 */
+/*    그러면 네 개의 엘리먼트는 총 100% - 48px의 넓이를 갖습니다.  */
+/*    그러나 이 때, 마지막 엘리먼트는 우측 마진이 없으므로 세 개의 마진 영역이 16px을 나눠 갖습니다.  */
+/*    글로만 설명하기는 어려우니 그림을 참고해주세요 :)  */
+.four-div-wrap > div {
+    width: calc(100% / 4 - 12px);
+    display: inline-block;
+    margin-right: 16px;
+    background-color: #99b5cb;
+}
+
+.four-div-wrap > div.three-div-merge {
+    width: calc(300% / 4 - 36px + 32px);
+    display: inline-block;
+    margin-right: 12px;
+    background-color: #cbb3bf;
+}
+
+.four-div-wrap > div.three-div-merge:before {
+    content: "";
+    display: block;
+    padding-top: calc(100% / 3 - 32px / 3);
+}
+
+.four-div-wrap > div:last-child {
+    margin-right: 0;
+}
+
+.four-div-wrap > div:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+

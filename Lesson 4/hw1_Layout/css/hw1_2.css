@@ -1,0 +1,59 @@
+.two-div-wrap {
+    margin: 20px 0;
+    font-size: 0;
+}
+
+.two-div-wrap > div:first-child {
+    /* Q. calc(50% - 10px)과 margin-right: 20px이 이해가 안돼요 */
+    /* A. 반응형으로 넓이의 %값을 사용하면서, object 주변 margin 을 유지하기 위해 */
+    /*    사용한 방법입니다. 아래 vertical-two-div-wrap 도 넓이가 50% - 10px */
+    /*    이므로, two-div-wrap 안의 컨텐츠 넓이는 총 100% - 20px 이며, */
+    /*    margin 을 20px로 유지하면 정확하게 떨어지는 모양이 만들어집니다. */
+    width: calc(50% - 10px);
+    margin-right: 20px;
+    background-color: #99b5cb;
+    display: inline-block;
+}
+
+/* Q. 선택자 사이의 ,가 뭐죠? */
+/* A. 여러 선택자에 동시에 같은 CSS 를 부여할 수 있는 문법입니다 :) */
+.two-div-wrap > div:first-child:before,
+.vertical-two-div-wrap:before {
+    padding-top: 100%;
+    display: block;
+    content: '';
+}
+
+.vertical-two-div-wrap {
+    font-size: 16px;
+    width: calc(50% - 10px);
+    position: relative;
+    display: inline-block;
+}
+
+.vertical-two-div {
+    /* Q. position: absolute / relative 가 뭔가요? */
+    /* A. position 속성은 부모 요소의 위치를 기준으로 자식 요소의 위치를 정할 수 있는 속성입니다.  */
+    /*    가장 가까운 부모 중 position: relative 속성을 가진 요소가 기준점이 되며 */
+    /*    top / bottom / left/ right 의 앵커링 포인트를 기준으로 */
+    /*    얼마나 떨어진 위치에 둘 것인지를 지정할 수 있습니다.  */
+    /*    default 값은 top:0;left:0;입니다. */
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.vertical-two-div > div {
+    width: 100%;
+    background-color: #bce6d4;
+}
+
+.vertical-two-div > div:before {
+    padding-top: calc(50% - 10px);
+    display: block;
+    content: '';
+}
+
+.vertical-two-div > div:first-child {
+    margin-bottom: 20px;
+}

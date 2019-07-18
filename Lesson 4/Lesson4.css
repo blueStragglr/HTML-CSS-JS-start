@@ -1,0 +1,120 @@
+/**: 모든 요소를 선택하는 CSS 선택자*/
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 10px;
+}
+
+.cornflowerblue {
+  /*HEXACODE*/
+  /*background-color: #6495ED;*/
+
+  /*RGBA*/
+  /*background-color: rgba(100,149,237,1);*/
+
+  /*NAME*/
+  background-color: cornflowerblue;
+}
+
+/*position: absolute의 용도*/
+.parent {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.parent:hover > .child {
+  opacity: 1;
+}
+
+.child {
+  opacity: 0;
+  transition: .25s ease;
+
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*나쁜 코드
+.child1,
+.child2,
+.child3,
+.child4{
+  background-color: brown;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+}
+.child1{
+   left: 0;
+ }
+.child2{
+  left: 25%;
+}
+.child3{
+  left: 50%;
+}
+.child4{
+  left: 75%;
+}
+@media screen and (max-width: 1000px) {
+  .child1{
+    left: 0;
+  }
+  .child2{
+    left: 50%;
+  }
+  .child3{
+    left: 0;
+    top: 250px;
+  }
+  .child4{
+    left: 50%;
+    top: 250px;
+  }
+}
+*/
+
+.fixed-button {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+}
+
+
+/***************/
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.flex-double-element {
+  height: 100px;
+  border: 1px solid #e9e9e9;
+
+  flex: 2;
+  width: 100%;
+
+}
+
+.flex-element {
+  /*height: 100px;*/
+  border: 1px solid #e9e9e9;
+  flex: 1;
+  min-width: 200px;
+}
+
+.flex-element > img {
+  width: 100%;
+}
+
