@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="Lesson6.css">
+  <title>Lesson 6</title>
+</head>
+<body>
+
+<div id="division">
+  my profile
+  <div id="name">
+    inner HTML
+  </div>
+  <div id="age">
+    <span>blabla</span>
+  </div>
+</div>
+
+<!--id는 javascript를 위해 주로 사용하고, -->
+<!--class는 CSS를 위해 주로 사용합니다. -->
+<!--id는 HTML 문서 내에 유일하게 존재하여야 하며,-->
+<!--class는 반복 사용될 수 있습니다. -->
+<!--<button type="button" onclick="alert('dont click!')"> likeNumber </button>-->
+
+<script>
+  // for(let i = 0 ; i < 10 ; i++){
+  //   console.log(i*2);
+  //   if (i < 5){
+  //   }
+  // }
+
+  // console.log - 확인할 때 사용!
+  console.log('hello javascript!');
+
+  // alert - 사용자에게 경고를 띄울 때 사용!
+  // alert('i is too small');
+
+  // string - 문자열
+  let nameInput;
+
+  // integer(정수), float(자릿수 짧은 소수), double(자릿수 긴 소수) - 숫자
+  // 자바스크립트는 숫자변수를 구분하지 않습니다
+  let ageInput;
+
+  // boolean - true/false
+  const isAlive = true;
+  const MATH_PI = 3.14152;
+
+  ageInput = prompt('How old are you?');
+  nameInput = prompt('What is your name?');
+
+  document.querySelector('#name').innerHTML = nameInput;
+  document.querySelector('#age').innerHTML = ageInput;
+
+</script>
+
+</body>
+</html>

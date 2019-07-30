@@ -18,7 +18,7 @@
 /* Q. 선택자 사이의 ,가 뭐죠? */
 /* A. 여러 선택자에 동시에 같은 CSS 를 부여할 수 있는 문법입니다 :) */
 .two-div-wrap > div:first-child:before,
-.vertical-two-div-wrap:before {
+.vertical-two-div-wrap:after {
     padding-top: 100%;
     display: block;
     content: '';
